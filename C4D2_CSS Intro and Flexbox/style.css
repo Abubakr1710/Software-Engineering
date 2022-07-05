@@ -6,3 +6,36 @@
     background-position: center;
     margin: 0 auto;
 }
+
+.main-image{
+    width: 100%;
+    height: 100%;
+    background-image: url('backg.jpg');
+    background-size: 100%;
+    background-position: center;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 64px;
+}
+body{
+    margin: 0;
+    font-family: 'Gentium Book Plus', serif;
+}
+.container{
+    display: flex;
+}
+.item{
+    width: 500px;
+    height: 500px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-inline-start: 100px;
+}
+.mypic{
+    width: 500;
+    height: 500;
+}
