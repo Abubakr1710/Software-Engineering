@@ -1,26 +1,88 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
         <title>TravelUz</title>
     </head>
-    <body>
-        <nav class="navbar navbar-dark bg-primary">
-            <div class="container">
+    <body class="main-image">
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
               <a class="navbar-brand" href="#">
-                <img src="images/uzblogo.png" alt="" width="120">
+                <img src="images/uzblogo.png" alt="" width="100">
               </a>
+              <a class="nav_text_selected" href="main.html">Home</a>
+              <a class="nav_text" href="deal_week.html">Deal of The week</a>
+              <a class="nav_text" href="deal_day.html">Deal of the day</a>
+              <a class="nav_text" href="summer.html"><span class="shadow-lg p-3 mb-5 bg-dark rounded">Welcome Summer</span></a>
+              <a class="nav_text" href="lminute.html">Last Minute</a>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit" style="color: yellow;">Search</button>
+              </form>
             </div>
-          </nav>
+        </nav>
         <div class="container">
             <div class="row">
-                <img src="images/uzbback.jpg" class="img-thumbnail" alt="Uzbekistan">
+                <div class="col-12 col-lg-6 col-md-3 mt-5">
+                    <div class="card w-100" style="width: 18rem;">
+                        <img src="images/samarkand.jpg" class="card-img-top" alt="Bukhara" style="width: auto;"s/>
+                        <div class="card-body">
+                            <h5 class="card-title">Samarkand</h5>
+                            <p class="card-text">Samarkand is the one of the oldest cities in the world. 
+                                Samarkand were capital city of Timurid Empire
+                            </p>
+                            <a href="#" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-md-3 mt-5">
+                    <div class="card w-100" style="width: 18rem;">
+                        <img src="images/bukhara.jpg" class="card-img-top" alt="Bukhara" style="width: auto;"s/>
+                        <div class="card-body">
+                            <h5 class="card-title">Bukhara</h5>
+                            <p class="card-text">Bukhara is the one of the oldest cities in the world. 
+                                Bukhara were capital city of Emirate of Bukhara
+                            </p>
+                            <a href="#" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-md-3 mt-5">
+                    <div class="card w-100" style="width: 18rem;">
+                        <img src="images/khiva.jpg" class="card-img-top" alt="Khiva"/>
+                        <div class="card-body">
+                            <h5 class="card-title">Khiva</h5>
+                            <p class="card-text">Khiva is the one of the oldest cities in the world. 
+                                Khiva were capital city of Khanate of Khiva
+                            </p>
+                            <a href="#" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-md-3 mt-5">
+                    <div class="card w-100" style="width: 18rem;">
+                        <img src="images/kokand.jpg" class="card-img-top" alt="Kokand"/>
+                        <div class="card-body">
+                            <h5 class="card-title">Kokand</h5>
+                            <p class="card-text">Kokand is the one of the oldest cities in the world. 
+                                Kokand were capital city of Khanate of Kokand
+                            </p>
+                            <a href="#" class="btn btn-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-12 col-sm-6 col md4 col-lg-3">Test Text</div>
-                <div class="col-12 col-sm-6 col md4 col-lg-3">Test Text</div>
-                <div class="col-12 col-sm-6 col md4 col-lg-3">Test Text</div>
-                <div class="col-12 col-sm-6 col md4 col-lg-3">Test Text</div>
-            </div>
+        </div>
+        <div class="container">
+            <footer class="bg-light mt-5 pt-3 py-1">
+                <h1 style="text-align: center;">Travel Uz</h1>
+                <h4 style="text-align: center;">All Rights reserved</h4>
+                <div class="bg-light mt-5 pt-3 py-1">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">
+                        <h1><a class="nav_text" href="contact.html">Contact Us</a></h1>
+                    </button>
+                </div>
+            </footer>
         </div>
     </body>
 </html>
