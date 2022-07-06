@@ -17,6 +17,10 @@
     object-fit: cover;
 }
 
+.card-body{
+    flex-shrink: calc();
+}
+
 .form-control{
     color: yellow !important;
 }
