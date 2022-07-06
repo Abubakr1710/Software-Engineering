@@ -27,15 +27,14 @@ body{
     display: flex;
 }
 .item{
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     margin: 10px;
     justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin-inline-start: 100px;
+    margin-inline-start: auto;
+    background-color: red;
 }
 .mypic{
-    width: 500;
-    height: 500;
+    width: 400;
+    height: 400;
 }
