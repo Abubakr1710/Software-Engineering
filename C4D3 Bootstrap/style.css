@@ -1,0 +1,22 @@
+.bg-dark{
+    background-color: rgb(17, 151, 228) !important;
+}
+.main-image{
+    background-image: url('images/back.jpg') !important;
+}
+.nav_text{
+    color: white !important; 
+}
+.nav_text_selected{
+    color: yellow;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.form-control{
+    color: yellow !important;
+}
