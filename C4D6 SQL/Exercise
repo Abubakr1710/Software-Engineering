@@ -1,16 +1,107 @@
+/*
+SELECT * 
+  FROM film;
+*/
+/*
+SELECT district, phone, postal_code 
+  FROM address;
+*/
+
+/*
+SELECT district || ' ' || phone || ' ' || postal_code 
+    AS full_address 
+  FROM address;
+*/
+
+--SELECT first_name, last_name 
+--  FROM customer 
+-- WHERE first_name LIKE 'J%';
+
+-- SELECT * 
+--   FROM payment 
+--  WHERE amount 
+--BETWEEN 3 AND 5;
+
+-- SELECT * 
+--   FROM payment 
+--  WHERE payment_date 
+--BETWEEN '2007-02-15' AND '2007-02-20';
+
+--SELECT title 
+--  FROM film 
+-- WHERE film_id 
+--    IN (SELECT film_id FROM inventory);
+
 --SELECT * 
---FROM film;
-SELECT 
-    district, 
-    phone, 
-    postal_code 
-FROM 
-    address;
---SELECT district || ' ' || phone || ' ' || postal_code AS full_address FROM address;
---SELECT first_name, last_name FROM customer WHERE first_name LIKE 'J%';
---SELECT * FROM payment WHERE amount BETWEEN 3 AND 5;
---SELECT * FROM payment WHERE payment_date BETWEEN '2007-02-15' AND '2007-02-20';
---SELECT title FROM film WHERE film_id IN (SELECT film_id FROM inventory);
---SELECT * FROM payment ORDER BY payment_date DESC LIMIT 6;
---SELECT first_name, last_name FROM customer ORDER BY first_name DESC limit 5;
---SELECT first_name, last_name FROM customer ORDER BY first_name ASC LIMIT 5 OFFSET 10;
+--  FROM payment 
+-- ORDER BY payment_date 
+--  DESC 
+-- LIMIT 6;
+
+--SELECT first_name
+--  FROM customer 
+-- ORDER BY first_name 
+--  DESC 
+--  limit 5;
+
+--SELECT first_name, last_name 
+--  FROM customer
+-- ORDER BY first_name 
+--   ASC LIMIT 5 
+--OFFSET 10;
+
+/*
+INSERT
+    INTO customer(
+        store_id,
+        first_name,
+        last_name,
+        email,
+        address_id
+    )
+    VALUES
+        (1,
+         'Abubakr',
+         'Mamajonov',
+         'mamajonov1710@gmail.com',
+         1),
+         
+         (1,
+         'Seconduser',
+         'SSeconduser',
+         'second@gmail.com',
+         1),
+         (1,
+         'Thirduser',
+         'SThirdduser',
+         'third@gmail.com',
+         1),
+         
+         (1,
+         'Fourthuser',
+         'SFourthuser',
+         'fourth@gmail.com',
+         1),
+         (1,
+         'Fifthuser',
+         'SFifthuser',
+         'fifth@gmail.com',
+         1)
+         RETURNING *;
+*/
+
+/*
+UPDATE customer
+    SET
+        first_name = 'EditedSeconduser'
+  WHERE customer_id=601
+  RETURNING *;
+*/
+
+/*
+DELETE FROM customer
+      WHERE customer_id=604
+  RETURNING *;
+*/
+
+
