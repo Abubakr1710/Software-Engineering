@@ -26,23 +26,35 @@ SELECT district || ' ' || phone || ' ' || postal_code
 --   FROM payment 
 --  WHERE payment_date 
 --BETWEEN '2007-02-15' AND '2007-02-20';
-
---SELECT title 
---  FROM film 
--- WHERE film_id 
---    IN (SELECT film_id FROM inventory);
+/*
+SELECT title 
+ FROM film 
+ WHERE film_id 
+    IN (SELECT film_id FROM inventory);
+*/
 
 --SELECT * 
 --  FROM payment 
 -- ORDER BY payment_date 
 --  DESC 
 -- LIMIT 6;
-
---SELECT first_name
---  FROM customer 
--- ORDER BY first_name 
---  DESC 
---  limit 5;
+/*
+SELECT first_name
+  FROM customer 
+  limit 5
+  ORDER BY first_name
+  DESC;
+  */
+  
+  /*
+  SELECT first_name 
+  FROM( SELECT first_name 
+          FROM customer
+         limit 5) 
+    AS username
+ ORDER BY first_name
+  DESC;
+*/
 
 --SELECT first_name, last_name 
 --  FROM customer
