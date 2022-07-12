@@ -95,3 +95,31 @@ SELECT
   JOIN staff 
        ON staff.staff_id = store.store_id 
  */
+ 
+-- Question 6 :
+-- In this store, every worker receives 1500 $ base salary
+-- After the 5000th movie, they get a bonus of 0.1 euro for every movie they rent.
+-- Calculate total bonus that is received by staff members and join their names and last_names
+/*
+SELECT payment.payment_id AS payment_id,
+       staff.staff_id AS staff_id,
+       staff.first_name AS first_name,
+       staff.last_name AS last_name,
+       COUNT (payment_id) AS total_sale
+  FROM rental 
+  JOIN staff
+       ON staff.staff_id = rental.staff_id
+  JOIN payment
+       ON payment.payment_id = rental.staff_id
+*/
+
+ SELECT
+        staff.first_name AS staff_first_name,
+        staff.last_name AS staff_last_name,
+  COUNT (payment_id) AS total_sale
+   FROM payment
+   JOIN staff
+        ON staff.staff_id = payment.staff_id
+  GROUP BY staff.staff_id
+  ORDER BY total_sale
+   DESC;
