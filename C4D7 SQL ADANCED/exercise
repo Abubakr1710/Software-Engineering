@@ -86,6 +86,7 @@ SELECT actor_id,
 SELECT 
        store.store_id AS store_id,
        address.address_id AS address_id,
+       store.manager_staff_id AS manager_staff_id,
        staff.first_name AS first_name,
        staff.last_name AS last_name
   FROM store
