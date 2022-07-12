@@ -1,0 +1,35 @@
+
+--Question 1 :
+--Select film title description and release year join category table.
+--Name column names with table name by using snake case.
+/*
+SELECT film.film_id,
+       film.title AS title,
+       film.description AS description,
+       film.release_year AS release_year,
+       category.name As category_name
+  FROM film
+  JOIN category
+       ON category.category_id = film.film_id;
+ */
+ 
+  
+
+-- Question 2 :
+-- Select customer and their address join country and city tables
+-- Name column names with table name by using snake case.
+/*
+SELECT customer_id,
+       customer.first_name AS first_name,
+       customer.last_name AS last_name,
+       address.address AS address,
+       country.country AS country,
+       city.city AS city
+  FROM customer
+  JOIN address
+       ON address.address_id = customer_id
+  JOIN country
+       ON country.country_id = customer_id
+  JOIN city
+       ON city.city_id = customer_id
+ */
