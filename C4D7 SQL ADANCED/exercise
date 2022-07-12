@@ -63,3 +63,18 @@ SELECT payment_id,
   JOIN staff
        ON staff.staff_id = payment.staff_id
 */
+
+-- Question 4 :
+-- Select all the actors and films and join them
+-- Name column names with table name by using snake case.
+-- HINT : You need to use groupby
+/*
+SELECT actor_id, 
+       first_name,
+       last_name,
+       film.title AS title
+  FROM actor
+  JOIN film
+       ON film.film_id = actor_id
+ */
+ 
