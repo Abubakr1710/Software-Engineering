@@ -116,7 +116,8 @@ SELECT payment.payment_id AS payment_id,
  SELECT
         staff.first_name AS staff_first_name,
         staff.last_name AS staff_last_name,
-  COUNT (payment_id) AS total_sale
+  COUNT (payment_id) AS total_sale,
+ (COUNT (payment_id)-5000) * 0.1 AS "Bonus (euro)"
    FROM payment
    JOIN staff
         ON staff.staff_id = payment.staff_id
