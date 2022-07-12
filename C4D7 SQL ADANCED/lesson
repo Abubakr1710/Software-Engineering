@@ -1,16 +1,82 @@
 /*
-Question 1 :
-Select film title description and release year join category table.
-Name column names with table name by using snake case.
-*/
-
-/*
-SELECT film.film_id,
-       film.title AS title,
-       film.description AS description,
-       film.release_year AS release_year,
-       category.name As category_name
-  FROM film
-  JOIN category
-       ON category.category_id = film.film_id;
+SELECT customer_id,
+   SUM (amount) AS total_paid
+  FROM payment
+ GROUP BY customer_id
+ ORDER BY total_paid 
+  DESC;
  */
+ 
+ /*
+ SELECT staff_id,
+  COUNT (payment_id) AS total_sale
+   FROM payment
+  GROUP BY staff_id
+  ORDER BY total_sale
+   DESC;
+ */
+ 
+ /*
+ SELECT
+       SUM(amount) AS total_amount,
+       DATE (payment_date) AS paid_date
+   fROM payment
+  GROUP BY DATE(payment_date);
+ */
+ 
+ /*
+ SELECT customer_id,
+        SUM (amount)
+   FROM payment
+  GROUP BY customer_id
+  HAVING SUM (AMOUNT) > 200;
+  */
+  
+  /*
+  SELECT store_id,
+         COUNT (customer_id)
+    FROM customer
+   GROUP BY store_id
+  HAVING COUNT (customer_id) > 300;
+  */
+  
+ /*
+  SELECT film_id,
+         title,
+         rental_rate
+    FROM film
+   WHERE rental_rate > (SELECT AVG (rental_rate)
+                          FROM film);
+  */
+  
+  /*
+  SELECT customer_id,
+     SUM (amount) as total_spent_by_customer,
+         ROUND(( SELECT AVG(amount) FROM payment), 2) AS average
+    FROM payment
+   GROUP BY customer_id
+  HAVING sum (amount) > ( SELECT AVG(amount) 
+                            FROM payment)
+   ORDER BY total_spent_by_customer
+    DESC;
+  */
+  
+  /*
+  SELECT customer.customer_id,
+         customer.first_name AS customer_first_name,
+         customer.last_name AS customer_last_name,
+         staff.first_name AS staff_first_name,
+         staff.last_name AS staff_last_name,
+         payment.amount,
+         payment.payment_date,
+         rental.rental_date,
+         rental.return_date
+    FROM customer
+    JOIN payment
+         ON payment.customer_id = customer.customer_id
+    JOIN staff
+         ON payment.staff_id = staff.staff_id
+    JOIN rental
+         ON payment.rental_id = rental.rental_id
+   ORDER BY payment_date
+  */
