@@ -33,3 +33,33 @@ SELECT customer_id,
   JOIN city
        ON city.city_id = customer_id
  */
+ 
+-- Question 3 :
+-- Select all payments info including staff info, customer info, and rental info.
+-- Name column names with table name by using snake case.
+/*
+SELECT payment_id,
+       amount,
+       payment_date,
+       customer.first_name AS customer_first_name,
+       customer.last_name AS customer_last_name,
+       customer.email AS customer_email,
+       customer.create_date as profile_created,
+       customer.last_update AS customer_last_update,
+       customer.active AS customer_active,
+       rental.rental_date AS rental_date,
+       rental.return_date AS return_date,
+       rental.last_update AS rental_last_update,
+       staff.first_name AS staff_first_name,
+       staff.last_name AS staff_last_name,
+       staff.email AS staff_email,
+       staff.active AS active,
+       staff.last_update As staff_last_update
+  FROM payment
+  JOIN customer
+       ON customer.customer_id = payment.customer_id
+  JOIN rental
+       ON rental.rental_id = payment.rental_id
+  JOIN staff
+       ON staff.staff_id = payment.staff_id
+*/
