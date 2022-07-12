@@ -78,3 +78,19 @@ SELECT actor_id,
        ON film.film_id = actor_id
  */
  
+
+-- Question 5 :
+-- Select all the stores with addresses and manager staff name last name.
+
+/*
+SELECT 
+       store.store_id AS store_id,
+       address.address_id AS address_id,
+       staff.first_name AS first_name,
+       staff.last_name AS last_name
+  FROM store
+  JOIN address
+       ON address.address_id = store.store_id
+  JOIN staff 
+       ON staff.staff_id = store.store_id 
+ */
