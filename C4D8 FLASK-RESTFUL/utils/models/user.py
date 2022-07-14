@@ -8,7 +8,7 @@ from utils.db import db
 import uuid
 
 class User(db.Model):
-    user_id = db.Column(db.String(32), primary_key = True, default=str(uuid.uuid4()), nullable=False)
+    user_id = db.Column(db.String(32), primary_key = True, nullable=False)
     first_name = db.Column(db.String(255), nullable=False)
     last_name = db.Column(db.String(255), nullable=False)
     email = db.Column(db.String(255), nullable=False, unique=True)
