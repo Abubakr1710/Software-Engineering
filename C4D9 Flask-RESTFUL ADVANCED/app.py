@@ -1,4 +1,4 @@
-from flask import Flask, request, Response
+from flask import Flask, request, Response, render_template
 from utils.db import db_init, db
 from werkzeug.utils import secure_filename
 from utils.models import Img 
@@ -9,9 +9,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///img.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db_init(app)
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
+@app.route("/") 
+def index():
+    return render_template('index.html')
 
 @app.route('/upload', methods=['POST'])
 def upload():
