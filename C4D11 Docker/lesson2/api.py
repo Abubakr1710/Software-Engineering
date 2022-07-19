@@ -12,7 +12,7 @@ class Students(Resource):
 class Name(Resource):
     def get(self):
         parser = reqparse.RequestParser()
-        parser.add_argument('email', type=str)
+        parser.add_argument('email',location='json', type=str)
 
         args = parser.parse_args()
         email = args['email']
@@ -23,4 +23,4 @@ api.add_resource(Students, "/students")
 api.add_resource(Name, "/name")
 
 if __name__ == "__main__":
-    app1.run('0.0.0.0')
+    app1.run('0.0.0.0', port=4000)
