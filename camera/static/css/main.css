@@ -1,0 +1,14 @@
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(6, 6, 6);
+}
+
+a{
+    text-align: center;
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+}
+
